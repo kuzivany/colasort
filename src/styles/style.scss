@@ -1,0 +1,81 @@
+@import 'variables';
+
+.header {
+    display: table;
+    width: 100%;
+    height: $header-height;
+    border-bottom: 1px solid $primary;
+
+    &--content {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-weight: 900;
+    }
+}
+
+#root {
+    height: calc(100vh - #{$header-height});
+    overflow: hidden;
+}
+
+.SortButton {
+    $this: &;
+
+    position: absolute;
+    display: table-cell;
+    height: $header-height - 1px;
+    background: transparent;
+    border: 0;
+    top: 0;
+    vertical-align: middle;
+    right: 0;
+
+    &--target {
+        border: 1px solid $primary;
+        border-radius: 2px;
+        display: block;
+        padding: 0.125em 0.5em;
+
+        #{$this}:focus &, #{$this}:hover & {
+            background-color: adjust-color($primary, $lightness: 88%);
+        }
+    }
+
+    .icon {
+        font-style: normal;
+    }
+}
+
+.Table {
+    height: 100%;
+    overflow: auto;
+}
+
+.Row {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+
+    .row {
+        flex-grow: 1;
+    }
+}
+
+.Column {
+    &--inner {
+        display:  flex !important;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*
+-----------------------------------------------------------
+ UTILITIES
+-----------------------------------------------------------
+*/
+
+@import 'utilities';
