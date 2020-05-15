@@ -1,3 +1,7 @@
+/*!
+ * ColaSort <https://github.com/kuzivany/colasort>
+ */
+
 import { h, render, Fragment } from 'preact'
 import { useState } from 'preact/hooks'
 import { App } from './app'

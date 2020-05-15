@@ -3,17 +3,18 @@
   "version": "0.2.0",
   "source": "src/index.jsx",
   "main": "dist/index.js",
-  "author": "Kuzivakwashe",
+  "author": "Kuzivakwashe <kuzivany@gmail.com>",
   "license": "MIT",
+  "repository": "https://github.com/kuzivany/colasort",
   "private": true,
   "scripts": {
     "prestart": "gulp clear",
     "start": "cross-env NODE_ENV=development npm-run-all --parallel serve watch:*",
     "build": "cross-env NODE_ENV=development npm-run-all --parallel build:*",
-    "build:bundle": "microbundle --target web --external none",
+    "build:bundle": "microbundle --target web -f iife --external none",
     "build:styles": "gulp",
     "serve": "http-server dist --port 5253",
-    "watch:bundle": "microbundle watch --target web --external none",
+    "watch:bundle": "microbundle watch --target web -f iife --external none",
     "watch:styles": "gulp watch"
   },
   "dependencies": {
