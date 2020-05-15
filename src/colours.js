@@ -11,5 +11,5 @@ const COLOURS = [
  * @param {int} index
  */
 export function colour ( index ) {
-	return `background-color: ${COLOURS[index - 1]};`
+	return `background-color: ${COLOURS[index % COLOURS.length]};`
 }
