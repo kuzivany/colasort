@@ -3,7 +3,6 @@ const del = require('del')
 const Fiber = require('fibers')
 
 const { src, dest, parallel, series, watch } = require('gulp')
-const postcss = require('gulp-postcss')
 const sass = require('@kuzivany/gulp-sass')
 const log = require('gulplog')
 
@@ -23,7 +22,6 @@ GLOB.SCSS = 'src/styles/**/*.scss'
 function scss () {
     return src(GLOB.SCSS)
         .pipe(sass.sync({ fiber: Fiber }).on('error', sass.logError))
-		.pipe(postcss())
         .pipe(dest('dist/css'))
 }
 
