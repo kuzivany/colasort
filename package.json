@@ -1,6 +1,6 @@
 {
   "name": "colasort",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "source": "src/index.jsx",
   "main": "dist/index.js",
   "author": "Kuzivakwashe",
@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "@kuzivany/gulp-sass": "https://github.com/kuzivany/gulp-sass",
-    "autoprefixer": "^9.7.3",
     "cross-env": "^6.0.3",
     "del": "^5.1.0",
     "fibers": "^4.0.2",

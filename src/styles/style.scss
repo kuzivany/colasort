@@ -2,9 +2,10 @@
 
 .header {
     display: table;
+    position: relative;
     width: 100%;
     height: $header-height;
-    border-bottom: 1px solid $primary;
+    z-index: 2;
 
     &--content {
         display: table-cell;
@@ -24,7 +25,7 @@
 
     position: absolute;
     display: table-cell;
-    height: $header-height - 1px;
+    height: $header-height;
     background: transparent;
     border: 0;
     top: 0;
@@ -32,7 +33,6 @@
     right: 0;
 
     &--target {
-        border: 1px solid $primary;
         border-radius: 2px;
         display: block;
         padding: 0.125em 0.5em;
@@ -69,7 +69,12 @@
         width: 100%;
         justify-content: center;
         align-items: center;
+        border-radius: 4px;
     }
+}
+
+.bg-trans {
+    background-color: rgba(#fff, .2);
 }
 
 /*
